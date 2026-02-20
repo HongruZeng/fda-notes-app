@@ -4,14 +4,14 @@ A backend API project built with FastAPI that allows users to:
 
 - Search adverse drug event data from the openFDA API
 - Extract useful JSON fields (e.g., side effects)
-- Save results as user notes
+- Save results as personal notes
 - Retrieve saved notes
 
 This project demonstrates API integration, JSON parsing, pagination, error handling, and RESTful API design.
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```
 fda-notes-app/
@@ -25,21 +25,36 @@ fda-notes-app/
 
 ---
 
+# 📝 User Stories
+
+## Exercise 1
+
+As a user, I want to search adverse drug events from the FDA database so that I can understand potential side effects of a medication.
+
+## Exercise 2
+
+As a user, I want to create an account and manage personal notes so that I can store and retrieve my own information.
+
+## Final
+
+As a user, I want to search FDA drug side effects and automatically save them as notes in my account so that I can keep track of important drug safety information.
+
+---
+
 # 🚀 Quick Start
 
 ## 1️⃣ Clone Repository
 
-
+```
 git clone https://github.com/HongruZeng/fda-notes-app.git
-
 cd fda-notes-app
-
+```
 
 ## 2️⃣ Install Dependencies
 
-
+```
 pip install -r requirements.txt
-
+```
 
 ---
 
@@ -52,17 +67,19 @@ Demonstrates:
 - Pagination (`skip`)
 - Handling empty results
 - Extracting useful JSON fields (`reactionmeddrapt`)
+- Testing with Python `requests`
+- Experimenting with curl and Postman
 
 Run:
 
-
+```
 cd exercise1
 python run_exercise1.py
-
+```
 
 ---
 
-# 🧰 Exercise 2 – User & Notes API
+# 🧰 Exercise 2 – User & Notes API (FastAPI)
 
 Implements:
 
@@ -74,16 +91,16 @@ Implements:
 
 Run:
 
-
+```
 cd exercise2
 uvicorn app.main:app --reload
-
+```
 
 Open browser:
 
-
+```
 http://127.0.0.1:8000/docs
-
+```
 
 ---
 
@@ -91,7 +108,7 @@ http://127.0.0.1:8000/docs
 
 Combines Exercise 1 + Exercise 2.
 
-New Feature:
+New Endpoint:
 
 POST `/users/{user_id}/search-and-save`
 
@@ -104,16 +121,16 @@ This endpoint:
 
 Run:
 
-
+```
 cd final_app
 uvicorn app.main:app --reload
-
+```
 
 Open:
 
-
+```
 http://127.0.0.1:8000/docs
-
+```
 
 ---
 
@@ -123,11 +140,11 @@ http://127.0.0.1:8000/docs
 
 POST `/users`
 
-
+```
 {
-"username": "grandma"
+  "username": "grandma"
 }
-
+```
 
 ---
 
@@ -135,11 +152,11 @@ POST `/users`
 
 POST `/users/1/search-and-save`
 
-
+```
 {
-"drug_name": "aspirin"
+  "drug_name": "aspirin"
 }
-
+```
 
 ---
 
@@ -149,11 +166,11 @@ GET `/users/1/notes`
 
 Response:
 
-
+```
 [
-"FDA side effects for aspirin: [...]"
+  "FDA side effects for aspirin: [...]"
 ]
-
+```
 
 ---
 
@@ -163,8 +180,10 @@ Response:
 - RESTful API design
 - JSON parsing
 - Error handling (409, 404, 422)
+- Query parameters and pagination
+- Python requests library
+- Tested using curl, Postman, and Swagger UI
 - Separation of concerns (models, services)
-- Modular project structure
 
 ---
 
@@ -177,3 +196,11 @@ Main dependencies:
 - requests
 
 Full list available in `requirements.txt`.
+
+---
+
+# 👤 Author
+
+Zeng Hongru  
+Boston University  
+hzang1@bu.edu
