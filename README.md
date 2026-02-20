@@ -174,19 +174,6 @@ Response:
 
 ---
 
-# 📌 Technical Highlights
-
-- FastAPI framework
-- RESTful API design
-- JSON parsing
-- Error handling (409, 404, 422)
-- Query parameters and pagination
-- Python requests library
-- Tested using curl, Postman, and Swagger UI
-- Separation of concerns (models, services)
-
----
-
 # 📚 Requirements
 
 Main dependencies:
