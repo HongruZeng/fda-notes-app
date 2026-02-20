@@ -197,10 +197,3 @@ Main dependencies:
 
 Full list available in `requirements.txt`.
 
----
-
-# 👤 Author
-
-Zeng Hongru  
-Boston University  
-hzang1@bu.edu
