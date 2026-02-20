@@ -11,16 +11,17 @@ This project demonstrates API integration, JSON parsing, pagination, error handl
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
+```
 fda-notes-app/
 │
 ├── exercise1/        # FDA API exploration using Python requests
 ├── exercise2/        # FastAPI user & notes system
 ├── final_app/        # Combined application (FDA + Users)
-│
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
